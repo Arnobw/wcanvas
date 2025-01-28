@@ -9,7 +9,6 @@
         WindowStyle="None"
         Background="#01ffffff"
         Name="root"
-        
         Title="MainWindow" Height="450" Width="800"
 
         WindowStartupLocation="CenterScreen"
@@ -20,21 +19,56 @@
 
 
     <Grid>
+        <InkCanvas x:Name="ic" Background ="Transparent" Margin="0,30,0,0" />
+
+
+
+
+
+
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="30"></RowDefinition>
-                <RowDefinition></RowDefinition>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Rectangle Fill="White" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"></Rectangle>
+            <Rectangle Fill="LightGray" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
             <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Top" Height="30" Width="Auto">
-                <Button Width="20" Height="20" Margin="5" Click="Minimise_c">―</Button>
-                <Button Width="20" Height="20" Margin="5" Click="Maximise_c">▣</Button>
-                <Button Background="OrangeRed" Width="20" Height="20" Margin="5" Click="Close_c">X</Button>
+
+
+                <Button  Width="20" Height="20" Margin="5" Click="Minimise_c">
+
+                    <Image Source="/img/minimise.png"/>
+
+
+                </Button>
+                <Button Width="20" Height="20" Margin="5" Click="Maximise_c">
+
+                    <Image Source="/img/maximise.png"/>
+
+
+                </Button>
+                <Button Background="OrangeRed" Width="20" Height="20" Margin="5" Click="Close_c">
+                    <Image Source="/img/close.png"/>
+                </Button>
+            </WrapPanel>
+
+            <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="Auto">
+                
+
+                <Button Width="20" Height="20" Margin="5" Click="Erase_b">
+
+                    <Image Source="/img/erase.png"/>
+
+                </Button>
+
+
+                <Button Background="Red" Width="20" Height="20" Margin="5" Click="Clickthrough_c">
+
+                    <Image Source="/img/erase.png"/>
+
+                </Button>
             </WrapPanel>
         </Grid>
-       
-        
-        <InkCanvas x:Name="ic" Background ="Transparent" Margin="0,35,0,0" />
 
 
 

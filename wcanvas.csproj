@@ -8,4 +8,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="img\close.png" />
+    <None Remove="img\erase.png" />
+    <None Remove="img\maximise.png" />
+    <None Remove="img\minimise.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\close.png" />
+    <Resource Include="img\erase.png" />
+    <Resource Include="img\maximise.png" />
+    <Resource Include="img\minimise.png" />
+  </ItemGroup>
+
 </Project>
