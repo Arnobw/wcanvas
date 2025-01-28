@@ -1,0 +1,45 @@
+﻿<Window x:Class="wcanvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wcanvas"
+        mc:Ignorable="d"
+        AllowsTransparency ="True"
+        WindowStyle="None"
+        Background="#01ffffff"
+        Name="root"
+        
+        Title="MainWindow" Height="450" Width="800"
+
+        WindowStartupLocation="CenterScreen"
+        BorderBrush="LightGray"
+        BorderThickness="1">
+        
+        
+
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Rectangle Fill="White" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"></Rectangle>
+            <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Top" Height="30" Width="Auto">
+                <Button Width="20" Height="20" Margin="5" Click="Minimise_c">―</Button>
+                <Button Width="20" Height="20" Margin="5" Click="Maximise_c">▣</Button>
+                <Button Background="OrangeRed" Width="20" Height="20" Margin="5" Click="Close_c">X</Button>
+            </WrapPanel>
+        </Grid>
+       
+        
+        <InkCanvas x:Name="ic" Background ="Transparent" Margin="0,35,0,0" />
+
+
+
+
+
+
+    </Grid>
+</Window>
