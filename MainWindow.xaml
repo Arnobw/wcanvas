@@ -10,19 +10,19 @@
         Background="#01ffffff"
         Name="root"
         Title="MainWindow" Height="450" Width="800"
-
+        
         WindowStartupLocation="CenterScreen"
         BorderBrush="LightGray"
         BorderThickness="1">
-        
-        
+
+
 
 
     <Grid>
         <InkCanvas x:Name="ic" Background ="Transparent" Margin="0,30,0,0" />
 
-
-
+        
+            
 
 
 
@@ -36,24 +36,23 @@
 
 
                 <Button  Width="20" Height="20" Margin="5" Click="Minimise_c">
-
                     <Image Source="/img/minimise.png"/>
-
-
                 </Button>
+
+
+
                 <Button Width="20" Height="20" Margin="5" Click="Maximise_c">
 
                     <Image Source="/img/maximise.png"/>
-
-
                 </Button>
+
                 <Button Background="OrangeRed" Width="20" Height="20" Margin="5" Click="Close_c">
                     <Image Source="/img/close.png"/>
                 </Button>
             </WrapPanel>
 
             <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="Auto">
-                
+
 
                 <Button Width="20" Height="20" Margin="5" Click="Erase_b">
 
@@ -62,11 +61,25 @@
                 </Button>
 
 
-                <Button Background="Red" Width="20" Height="20" Margin="5" Click="Clickthrough_c">
+                <Button Name="pin_c" Width="20" Height="20" Margin="5" Click="Clickthrough_c">
 
-                    <Image Source="/img/erase.png"/>
+                    <Image Source="/img/pin.png"/>
 
                 </Button>
+
+
+
+
+                <Button Width="20" Height="20" Margin="5" Click="Undo_c">
+
+                    <Image Source="/img/undo.png"/>
+
+                </Button>
+
+
+
+
+
             </WrapPanel>
         </Grid>
 

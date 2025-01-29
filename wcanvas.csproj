@@ -13,6 +13,8 @@
     <None Remove="img\erase.png" />
     <None Remove="img\maximise.png" />
     <None Remove="img\minimise.png" />
+    <None Remove="img\pin.png" />
+    <None Remove="img\undo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +22,8 @@
     <Resource Include="img\erase.png" />
     <Resource Include="img\maximise.png" />
     <Resource Include="img\minimise.png" />
+    <Resource Include="img\pin.png" />
+    <Resource Include="img\undo.png" />
   </ItemGroup>
 
 </Project>

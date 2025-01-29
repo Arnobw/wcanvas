@@ -15,17 +15,24 @@ namespace wcanvas
 
 
 
-{    public partial class MainWindow : Window
+{
+
+
+
+
+    public partial class MainWindow : Window
     {
         public MainWindow()
         {
 
             InitializeComponent();
+
             ic.DefaultDrawingAttributes.Color = Colors.Yellow;
-            ic.DefaultDrawingAttributes.Width = 20;
-            ic.DefaultDrawingAttributes.Height = 20;
+            ic.DefaultDrawingAttributes.Width = 10;
+            ic.DefaultDrawingAttributes.Height = 10;
             ic.DefaultDrawingAttributes.IsHighlighter = true;
             
+           
         }
 
 
@@ -37,17 +44,19 @@ namespace wcanvas
             }
         }
 
-        private void Erase_b(object sender, RoutedEventArgs e) {
+        private void Erase_b(object sender, RoutedEventArgs e)
+        {
             if (ic.EditingMode != InkCanvasEditingMode.EraseByPoint)
             {
                 ic.EditingMode = InkCanvasEditingMode.EraseByPoint;
 
             }
-            else {
+            else
+            {
                 ic.EditingMode = InkCanvasEditingMode.Ink;
 
             }
-  
+
         }
 
         private void Maximise_c(object sender, RoutedEventArgs e)
@@ -55,7 +64,7 @@ namespace wcanvas
             if (this.WindowState != WindowState.Maximized)
             {
                 this.WindowState = WindowState.Maximized;
-                
+
             }
             else if (this.WindowState != WindowState.Normal)
             {
@@ -63,25 +72,27 @@ namespace wcanvas
             }
         }
 
-        private void Clickthrough_c(object sender, RoutedEventArgs e) {
+        private void Clickthrough_c(object sender, RoutedEventArgs e)
+        {
             if (root.Topmost != true)
             {
                 root.Topmost = true;
                 root.Background = null;
-
                 ic.EditingMode = InkCanvasEditingMode.None;
-                ic.IsHitTestVisible = false;
-                
+                root.IsHitTestVisible = false;
+                pin_c.Background = Brushes.Blue;
             }
-            else {
-            root.Background = (Brush)new BrushConverter().ConvertFrom("#01ffffff");
-                ic.IsHitTestVisible=true;
-
+            else
+            {
+                root.Topmost = false;
+                root.Background = (Brush)new BrushConverter().ConvertFrom("#01ffffff");
+                ic.IsHitTestVisible = true;
                 ic.EditingMode = InkCanvasEditingMode.Ink;
 
+                pin_c.Background = Brushes.White;
 
             }
-            
+
         }
 
         private void Close_c(object sender, RoutedEventArgs e)
@@ -93,6 +104,20 @@ namespace wcanvas
         {
             this.DragMove();
         }
-    }
 
+
+        private void Undo_c(object sender, RoutedEventArgs e)
+        {
+            if (ic.Strokes.Count > 0)
+            {
+                ic.Strokes.RemoveAt(ic.Strokes.Count - 1);
+            }
+            else
+            {
+                // Else Do Nothing.
+            }
+        }
+
+
+    }
 }
