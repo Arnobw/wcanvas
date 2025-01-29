@@ -18,20 +18,22 @@
 
 
 
-    <Grid>
+    <Grid >
         <InkCanvas x:Name="ic" Background ="Transparent" Margin="0,30,0,0" />
 
-        
-            
 
 
 
-        <Grid>
+
+
+        <Grid Name="main_grid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Rectangle Fill="LightGray" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
+
+
             <WrapPanel HorizontalAlignment="Right" VerticalAlignment="Top" Height="30" Width="Auto">
 
 
@@ -46,17 +48,31 @@
                     <Image Source="/img/maximise.png"/>
                 </Button>
 
-                <Button Background="OrangeRed" Width="20" Height="20" Margin="5" Click="Close_c">
+                <Button Width="20" Height="20" Margin="5" Click="Close_c">
                     <Image Source="/img/close.png"/>
                 </Button>
             </WrapPanel>
 
             <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="Auto">
 
+                <Image Source="/img/icon.png" Height="30" Width="30" Margin="5"></Image>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">The best stroking app!</TextBlock>
 
-                <Button Width="20" Height="20" Margin="5" Click="Erase_b">
+                <Button Width="20" Height="20" Margin="5" Click="Clear_c">
+
+                    <Image Source="/img/delete.png"/>
+
+                </Button>
+
+                <Button Name="eraser" Width="20" Height="20" Margin="5" Click="Erase_b">
 
                     <Image Source="/img/erase.png"/>
+
+                </Button>
+
+                <Button Name="highlighter" Width="20" Height="20" Margin="5" Click="Set_highlighter">
+
+                    <Image Source="/img/highlighter.png"/>
 
                 </Button>
 
@@ -76,13 +92,18 @@
 
                 </Button>
 
+                <Button Background="Red" Width="20" Height="20" Margin="5" Click="Set_brush_Colour">
+
+                    
+
+                </Button>
+
 
 
 
 
             </WrapPanel>
         </Grid>
-
 
 
 

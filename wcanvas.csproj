@@ -6,11 +6,16 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>img\icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="img\close.png" />
+    <None Remove="img\delete.png" />
     <None Remove="img\erase.png" />
+    <None Remove="img\highlighter.png" />
+    <None Remove="img\icon.png" />
+    <None Remove="img\kittie.png" />
     <None Remove="img\maximise.png" />
     <None Remove="img\minimise.png" />
     <None Remove="img\pin.png" />
@@ -18,8 +23,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="img\icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="img\close.png" />
+    <Resource Include="img\delete.png" />
     <Resource Include="img\erase.png" />
+    <Resource Include="img\highlighter.png" />
+    <Resource Include="img\icon.png" />
     <Resource Include="img\maximise.png" />
     <Resource Include="img\minimise.png" />
     <Resource Include="img\pin.png" />
